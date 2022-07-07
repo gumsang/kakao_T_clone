@@ -1,13 +1,15 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:kakao_t_clone/main.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: <Widget>[
         _buildTop(),
         _buildMiddle(),
@@ -115,7 +117,28 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildMiddle() {
-    return Text('top');
+    return CarouselSlider(
+      options: CarouselOptions(
+        height: 150.0,
+        autoPlay: true,
+      ),
+      items: dummyItems.map((url) {
+        return Builder(
+          builder: (BuildContext context) {
+            return Container(
+                width: MediaQuery.of(context).size.width,
+                margin: EdgeInsets.symmetric(horizontal: 5.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.network(
+                    url,
+                    fit: BoxFit.cover,
+                  ),
+                ));
+          },
+        );
+      }).toList(),
+    );
   }
 
   Widget _buildBottom() {
