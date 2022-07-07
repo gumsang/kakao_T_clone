@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:kakao_t_clone/kakao_main_screen.dart';
 
 final dummyItems = [
-  'https://images.app.goo.gl/q4mHgcbwsNb23dg7A',
-  'https://images.app.goo.gl/AD4f55qoPvHZVeYd9',
-  'https://images.app.goo.gl/hkruwLaMJY1ZbRvm9',
+  'http://goldshell.co.kr/web/product/big/201909/0afaa8a4d640df8bec11e5863403c4e2.jpg',
+  'http://www.dorocy.co.kr/shopimages/dorocyshop/2030000004042.jpg?1642389149',
+  'http://m.e-sang.co.kr/web/product/big/20191115/233261bfc05202b353eaf20b64319639.jpg',
 ];
 
 void main() {
