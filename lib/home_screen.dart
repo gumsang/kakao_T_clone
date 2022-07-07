@@ -7,8 +7,64 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
+    return Column(
+      children: <Widget>[
+        _buildTop(),
+        _buildMiddle(),
+        _buildBottom(),
+      ],
     );
+  }
+
+  Widget _buildTop() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Column(
+          children: [
+            Icon(
+              Icons.local_taxi,
+              size: 40,
+            ),
+            Text('택시'),
+          ],
+        ),
+        Column(
+          children: [
+            Icon(
+              Icons.local_taxi,
+              size: 40,
+            ),
+            Text('택시'),
+          ],
+        ),
+        Column(
+          children: [
+            Icon(
+              Icons.local_taxi,
+              size: 40,
+            ),
+            Text('택시'),
+          ],
+        ),
+        Column(
+          children: [
+            Icon(
+              Icons.local_taxi,
+              size: 40,
+            ),
+            Text('택시'),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildMiddle() {
+    return Text('top');
+  }
+
+  Widget _buildBottom() {
+    return Text('top');
   }
 }
